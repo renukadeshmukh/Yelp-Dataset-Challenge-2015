@@ -8,8 +8,8 @@
 
 	1. CreateTrainingAndTestCollections.java: 
 		Imports the yelp data of business, review and tips into mongoDB and creates 60% training 
-		collection 40% test collection. Each collection has business id, it's associated categories, 
-		reviews and tips information.
+		collection 40% test collection. Each collection has business id, it's associated 
+		categories, reviews and tips information.
 				
 	2. GenerateIndex.java: 
 		Creates training and test indexes using lucene. For each record in the training and test 
@@ -107,7 +107,8 @@
 
 		R File: SentimentAnalysis.R
 			This file contains code to analyze train data class distribution, visualization of 
-			word cloud for generated features as per ratings and run different regression algorithms.
+			word cloud for generated features as per ratings and run different regression 
+			algorithms.
 				
 				
 ###### Evaluation
