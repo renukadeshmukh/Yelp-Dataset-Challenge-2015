@@ -1,6 +1,6 @@
 # Yelp-Dataset-Challenge-2015
 
-Task 1 : For each yelp business, there is category information (one business may belong to multiple categories). Yelp also has the review and tip information for a particular business provided by users. 
+## 1. Task : For each yelp business, there is category information (one business may belong to multiple categories). Yelp also has the review and tip information for a particular business provided by users. 
 Example: "categories": ["Indian", "Restaurants"]
 For task 1, the research question is to predict categories for each business by using the review and tip information. 
 
@@ -39,8 +39,9 @@ CategoryBusinessMapping.java:
 			
 			Important Functions :
 
-Task 2: Prediction of restaurant ratings with respect to user.
-	a. User-Business attribute model 
+## 2. Task: Prediction of restaurant ratings with respect to user.
+	a. User-Business attribute model
+	
 		1.PreProcessing :
 
 			Important Files :
