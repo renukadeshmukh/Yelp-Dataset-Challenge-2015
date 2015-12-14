@@ -8,6 +8,7 @@ For task 1, the research question is to predict categories for each business by 
 1. CreateTrainingAndTestCollections.java: 
 			Imports the yelp data of business, review and tips into mongoDB and creates 60% training collection 
 			40% test collection. Each collection has business id, it's associated categories, reviews and tips information.
+			
 2. GenerateIndex.java: 
 			Creates training and test indexes using lucene. For each record in the training and test collections in mongoDB,
 			Fetches the business_id, categories, combines reviews and tips, then adds it to the lucene document.
@@ -17,28 +18,37 @@ For task 1, the research question is to predict categories for each business by 
 			This class is used to iterate over every category (read from an input file), extract tips and review information pertaining to a category from the train index, POS tag the text and then extract the top query words for the category based on high TF*IDF score. 
 			
 			Important Functions :
+			public void buildQueries(ArrayList<String> categories);
+			public ArrayList<String> getNounsForCategory(String text);
+			public String getConsolidatedReviewAndTipForCategory(TopDocs topdocs);
 
 4. ScoreCalculator.java:
 			This class takes all the nound words for a given category (after POS tagging), and then coputes the TF*IDF score for each nouns and returns top n nouns to form a query for the given category.
 			
 			Important Functions :
+			public Double calculateScore(String nounword, ScoreDoc[] scoredocs);
+			public ArrayList<String> getTopQueryWordsForCategory(ArrayList<String> nouns, TopDocs topdocs, String category);
+			
 
 5. Tagger.java: 
 			This class uses the stanford-postagger jar file to tag text and extract nouns based on the english-left3words-distsim tagger model. 
 			
 			Important Functions :
+			public ArrayList<String> tagText(String text);
 
 *>CATEGORY PREDICTION:*
 6. CategoryPredictor.java: 
 			This class read all the queries from a query file, run the queries on the test index and predicts categories for business based, using different similarity algorithms.
 			
 			Important Functions :
+			public void rank(ArrayList<String> queries, String algo);
 
 7. CategoryBusinessMapping.java:
 			This class is used to create the ground truth file of businesses and category mapping, which is to be then used for final evaluation.  
 			
 			Important Functions :
-
+			public void buildGroundTruthFile();
+			
 ##### 2. Task: Prediction of restaurant ratings with respect to user.
 	a. User-Business attribute model
 	
