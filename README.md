@@ -1,4 +1,11 @@
 # Yelp-Dataset-Challenge-2015
+###### Team Members
+	* Charwad, Nayana Yashwant (ncharwad@umail.iu.edu)
+	* Chintala, Sri Laxmi (chintals@umail.iu.edu)
+	* Deshmukh, Renuka (renudesh@umail.iu.edu)
+	* Gaikwad, Aniket Sambhaji (anikgaik@umail.iu.edu)
+	* Indana, Venkata Prudhvi Raj (vindana@umail.iu.edu)
+
 
 ###### 1. Task : For each yelp business, there is category information (one business may belong to multiple categories). Yelp also has the review and tip information for a particular business provided by users. 
 ###### Example: "categories": ["Indian", "Restaurants"]
